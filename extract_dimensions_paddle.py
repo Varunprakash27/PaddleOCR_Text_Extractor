@@ -33,8 +33,8 @@ def draw_ocr(image, boxes, txts, scores, drop_score=0.5):
 
     return img
 
-INPUT_FOLDER = r"F:\Federated_Learning_using_flower\AutoCAD_Classification\input_images"
-OUTPUT_FOLDER = r"F:\Federated_Learning_using_flower\AutoCAD_Classification\fresh_outputs\extract_dimensions_paddle"
+INPUT_FOLDER = input("Enter path to input image folder: ").strip()
+OUTPUT_FOLDER = input("Enter path to output folder: ").strip()
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 ocr = PaddleOCR(use_angle_cls=True, lang='en')
